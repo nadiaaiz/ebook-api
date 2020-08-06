@@ -17,10 +17,4 @@ Route::get('/', function () {
     return "Kelas => XII RPL 3";
 });
 
-Route::get('/me', function () {
-    return ["NIS" => "3103118089", "Name" => "Mochamad Hakim Haiman", "Gender" => "Laki-Laki", "Phone" => "082138913460", "Kelas" => "XII RPL 3"];
-});
-
-Route::get('/kontrol', function () {
-    return "latihan control";
-});
+Route::get('/me', 'AuthController@me');
