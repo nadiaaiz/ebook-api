@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-AuthController",
+      "appliesTo": "app/Http/Controllers/AuthController",
+      "type": "launch"
+    }
+  ]
+}
