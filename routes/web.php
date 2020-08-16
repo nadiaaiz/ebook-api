@@ -15,12 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-
 });
-
-Route::get('/me', function (){
-    return ('me'); 
-});
-
-Route::get ('me', 'AuthController@index');
-
