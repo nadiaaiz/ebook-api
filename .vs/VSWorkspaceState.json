@@ -4,9 +4,10 @@
     "\\app",
     "\\app\\Http",
     "\\app\\Http\\Controllers",
-    "\\config",
     "\\resources",
-    "\\routes"
+    "\\resources\\views",
+    "\\routes",
+    "\\vendor"
   ],
   "SelectedNode": "\\app\\Http\\Controllers\\AuthController.php",
   "PreviewInSolutionExplorer": false
