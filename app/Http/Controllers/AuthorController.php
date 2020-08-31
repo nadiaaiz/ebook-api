@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Author;
 
 class AuthorController extends Controller
@@ -21,6 +20,7 @@ class AuthorController extends Controller
         }else{
             return response(["message" => "Data not found", "data" => null], 404);
         }
+        
     }
 
     /**
@@ -41,14 +41,16 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        $author = Author::create([
-            "name" => $request->name,
-            "date_of_births" => $request->date_of_births,
+       $author = Author:: create([
+           "name" => $request->name,
+            "date_of_birth" => $request->date_of_birth,
             "place_of_birth" => $request->place_of_birth,
             "gender" => $request->gender,
             "email" => $request->email,
             "hp" => $request->hp,
-        ]);
+
+
+       ]);
 
         return response(["message" => "Create data success", "data" => $author], 201);
     }
@@ -92,7 +94,7 @@ class AuthorController extends Controller
         $author = Author::find($id);
         if($author){
             $author->name = $request->name;
-            $author->date_of_births = $request->date_of_births;
+            $author->date_of_birth = $request->date_of_birth;
             $author->place_of_birth = $request->place_of_birth;
             $author->gender = $request->gender;
             $author->email = $request->email;
